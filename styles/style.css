@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     margin-top: 16px;
 }
 
@@ -53,4 +54,21 @@ body {
 
 #sketch-screen > div > * {
     flex: 1;
+}
+
+/*Add hover class*/
+#sketch-screen > div > *.hover {
+    background-color: black;
+}
+
+/*Format reset button*/
+#new-grid-btn {
+   margin-bottom: 1em;
+   display: inline-flex;
+   width: 100px;
+   padding: 1em;
+   justify-content: center;
+   align-items: center;
+   border-radius: 100px;
+   border: 1px solid black;
 }
