@@ -1,8 +1,8 @@
+ //Select screen element
+const sketchScreen = document.getElementById('sketch-screen');
+
 //Create make grid function
 function makeGrid(gridSize) {
-    //Select screen element
-    const sketchScreen = document.getElementById('sketch-screen')
-
     //Create for loop on column generation
     for(let i = 0; i < gridSize; i++) {
         //Create div column
@@ -26,4 +26,16 @@ function makeGrid(gridSize) {
 
 //Call make grid function
 makeGrid(16);
+
+//Create handle hover function
+function handleHover(event) {
+    if(event.target.classList.contains('row') || event.target.contains('columns')) {
+        //Add hover class to div
+        event.target.classList.add('hover');
+    }
+}
+
+//Call event listener
+sketchScreen.addEventListener('mouseover', handleHover);
+
 
