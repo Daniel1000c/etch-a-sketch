@@ -61,8 +61,16 @@ body {
     background-color: black;
 }
 
+/*Format button container*/
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 /*Format reset button*/
-#new-grid-btn {
+button {
    margin-bottom: 1em;
    display: inline-flex;
    width: 100px;
