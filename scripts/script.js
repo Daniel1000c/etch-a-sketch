@@ -42,6 +42,30 @@ function resetGrid() {
     hoveredElements.forEach(element => {
         element.classList.remove('hover');
     })
+
+    //Reset grid back to 16 x 16
+    sketchScreen.innerHTML = '';
+
+    makeGrid(16);
+}
+
+//Create newGrid function
+function newGrid(newSize){
+    //Prompt user for new grid size
+    newSize = +prompt('What is the new grid size?');
+    
+    //Create if statement
+    if(newSize > 100) {
+        //Create error message
+        alert('Grid is too big!!! Cannot Generate grids larger than 100');
+    } else {
+
+        //Erase old grid 
+        sketchScreen.innerHTML = '';
+
+        //Call make grid function
+        makeGrid(newSize);
+    }
 }
 
 //Create handle hover function
@@ -55,5 +79,7 @@ function handleHover(event) {
 //Call event listener
 sketchScreen.addEventListener('mouseover', handleHover);
 resetButton.addEventListener('click',resetGrid);
+createGrid.addEventListener('click', newGrid);
+
 
 
