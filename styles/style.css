@@ -51,7 +51,16 @@ body {
 }
 
 #sketch-screen{
-    background-color: whitesmoke;
-    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
     box-shadow: 0px 0px 15px 3px rgba(0,0,0,0.24);
+    gap: 1px;
+}
+
+.cell{
+    background-color: white;
+}
+
+.hover {
+    background-color: aqua;
 }
