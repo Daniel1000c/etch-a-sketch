@@ -1,5 +1,11 @@
- //Select screen element
+//Select screen element
 const sketchScreen = document.getElementById('sketch-screen');
+
+//Select reset button element
+const resetButton = document.getElementById('reset-grid-btn');
+
+//Select new grid button element
+const createGrid = document.getElementById('new-grid-btn');
 
 //Create make grid function
 function makeGrid(gridSize) {
@@ -27,6 +33,17 @@ function makeGrid(gridSize) {
 //Call make grid function
 makeGrid(16);
 
+//Create reset grid function
+function resetGrid() {
+    //Select all hovered elements
+    const hoveredElements = document.querySelectorAll('.hover');
+
+    //Iterate through each hover element and remove hover class
+    hoveredElements.forEach(element => {
+        element.classList.remove('hover');
+    })
+}
+
 //Create handle hover function
 function handleHover(event) {
     if(event.target.classList.contains('row') || event.target.contains('columns')) {
@@ -37,5 +54,6 @@ function handleHover(event) {
 
 //Call event listener
 sketchScreen.addEventListener('mouseover', handleHover);
+resetButton.addEventListener('click',resetGrid);
 
 
