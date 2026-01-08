@@ -16,9 +16,7 @@ function handleHover() {
 }
 
 //Create clear grid function
-function clearGrid() {
-    screen.innerHTML = '';
-}
+const clearGrid = () => screen.innerHTML = '';
 
 //Create make grid function
 function makeGrid(){
